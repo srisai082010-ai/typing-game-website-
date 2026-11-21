@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastType| Speed Typing Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>⚡ TypeRush</h1>
+      <p>How fast can you type?</p>
+    </header>
+
+    <section class="settings">
+      <label for="duration">Time</label>
+      <select id="duration">
+        <option value="10">10 seconds</option>
+        <option value="15">15 seconds</option>
+        <option value="30" selected>30 seconds</option>
+        <option value="60">60 seconds</option>
+        <option value="75">75 seconds</option>
+      </select>
+
+      <label for="difficulty">Difficulty</label>
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </section>
+
+    <section class="stats">
+      <div><span id="timer">30</span><small>SECONDS</small></div>
+      <div><span id="wpm">0</span><small>WPM</small></div>
+      <div><span id="accuracy">100%</span><small>ACCURACY</small></div>
+      <div><span id="best">0</span><small>PERSONAL BEST</small></div>
+    </section>
+
+    <div id="words" class="words"></div>
+
+    <textarea id="typing-input"
+      placeholder="Click here and start typing..."
+      aria-label="Typing test input"
+      spellcheck="false"
+      autocomplete="off"
+      autocapitalize="off"></textarea>
+
+    <div class="actions">
+      <button id="restart">↻ New Test</button>
+    </div>
+
+    <section id="results" class="results" hidden>
+      <h2>Test Complete!</h2>
+      <p>Your speed: <strong id="final-wpm">0</strong> WPM</p>
+      <p>Accuracy: <strong id="final-accuracy">0%</strong></p>
+      <p id="record-message"></p>
+    </section>
+
+    <footer>Made with ⚡ | TypeRush</footer>
+  </main>
+</body>
+</html>
+
